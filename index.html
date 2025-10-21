@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>European Windstorm Prediction Center</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 25px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      transition: top 0.4s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      margin-bottom: 50px;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      color: #cccccc;
+      max-width: 800px;
+      margin: 15px auto;
+    }
+
+    .updates {
+      background: #181818;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: left;
+    }
+
+    .updates h3 {
+      color: #ffffff;
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+
+    .updates p {
+      color: #cccccc;
+      font-size: 1em;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>European Windstorm Prediction Center</h1>
+    <nav>
+      <a href="https://euwpc.github.io/ewpc.github.io-outlooks/">Outlooks</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-archive/">Archive</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-glossary/">Glossary</a>
+      <a href="#">FAQ</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome</h2>
+      <p>
+        The <strong>European Windstorm Prediction Center (EWPC)</strong> provides windstorm outlooks, analyses, and discussions across Europe.  
+        Our goal is to help weather enthusiasts, researchers, and communities stay informed about significant storm events.
+      </p>
+      <p>
+        ⚠️ Note: These outlooks are not official and should not replace information from meteorological agencies.
+      </p>
+    </section>
+
+    <section class="updates">
+      <h3>Latest Update</h3>
+      <p><strong>Issued:</strong> October 20, 2025</p>
+      <p><strong>Summary:</strong> Active frontal systems developing across the North Atlantic. Monitoring potential windstorm formation later this week.</p>
+    </section>
+
+    <section class="links">
+      <h2>Explore</h2>
+      <p>
+        <a href="https://euwpc.github.io/ewpc.github.io-outlooks/">View Current Outlooks</a> •
+        <a href="https://euwpc.github.io/ewpc.github.io-archive/">View Archives</a> •
+        <a href="https://euwpc.github.io/ewpc.github.io-glossary/">View Glossary</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 European Windstorm Prediction Center
+  </footer>
+
+  <script>
+    // Hide header when scrolling down
+    let lastScrollTop = 0;
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.style.top = "-120px";
+      } else {
+        header.style.top = "0";
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
+</body>
+</html>
