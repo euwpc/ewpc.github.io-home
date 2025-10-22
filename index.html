@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>European Windstorm Prediction Center</title>
   <style>
-    .warning-banner {
-  background-color: #ff4444;
-  color: white;
-  text-align: center;
-  padding: 12px 40px 12px 12px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-}
-
-.warning-banner a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.warning-banner a:hover {
-  text-decoration: none;
-}
-
-.close-btn {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: white;
-  font-size: 18px;
-}
 
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -136,12 +106,7 @@
   </style>
 </head>
 <body>
-  <div class="warning-banner" id="warningBanner">
-  ⚠️ <strong>Severe Windstorm Warning:</strong> A strong windstorm is expected to impact Western Europe within 24 hours. 
-  <a href="https://euwpc.github.io/ewpc.github.io-outlooks/" target="_blank">View latest outlook →</a>
-  <span class="close-btn" onclick="closeBanner()">✖</span>
-</div>
-
+ 
   <header id="header">
     <h1>European Windstorm Prediction Center</h1>
     <nav>
@@ -202,12 +167,6 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   </script>
-  <script>
-  function closeBanner() {
-    const banner = document.getElementById("warningBanner");
-    banner.style.display = "none";
-  }
-</script>
 
 </body>
 </html>
