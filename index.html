@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- SITE OFFLINE OVERLAY -->
+<div id="site-offline-overlay" style="
+  position: fixed; inset: 0;
+  background:#0d1117;
+  color:#e6edf3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:999999999;
+  font-family: Arial, sans-serif;
+  pointer-events:all;">
+  <div style="font-size:80px; color:#ffcc00;">⚠️</div>
+  <h1 style="margin:12px 0; font-size:2.4rem;">Website Temporarily Offline</h1>
+  <p style="font-size:1.2rem; opacity:.8;">Please check back later.</p>
+</div>
+
+<script>
+  // Disable all input / interaction
+  const block = e => { e.preventDefault(); e.stopPropagation(); return false; };
+  ["click","mousedown","mouseup","keydown","keyup","contextmenu","touchstart"]
+    .forEach(evt => window.addEventListener(evt, block, true));
+
+  // Disable scrolling
+  document.body.style.overflow = "hidden";
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>European Windstorm Prediction Center</title>
